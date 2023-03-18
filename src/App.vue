@@ -3,7 +3,7 @@ import {computed, ref} from 'vue'
 import axios from 'axios'
 import loader from './assets/loader.svg'
 
-const SHEET_URL = 'https://sheetdb.io/api/v1/ie1y4wektzefc'
+const SHEET_URL = 'https://sheetdb.io/api/v1/cpqhntf3si7yg'
 
 const loading = ref(false)
 const touched = ref(false)
