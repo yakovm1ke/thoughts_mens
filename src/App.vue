@@ -31,7 +31,7 @@
     </button>
 
     <div>
-      телеграм:
+      телеграм канал
       <a
         :class='$style.link'
         href='https://t.me/thoughts_mens'
