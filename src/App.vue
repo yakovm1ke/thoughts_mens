@@ -66,6 +66,7 @@ body {
   gap: 20px;
 }
 .pageTitle {
+  text-align: center;
   font-size: 32px;
   font-weight: 800;
 }
@@ -75,6 +76,7 @@ body {
   width: 100%;
 }
 .formTitle {
+  text-align: center;
   font-size: 24px;
   font-weight: 800;
 }
