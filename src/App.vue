@@ -20,16 +20,15 @@ const isFormValid = computed(() => {
 })
 
 async function handleSubmit() {
-  loading.value = true
   touched.value = true
   if (!isFormValid.value) return
 
-  const body = {
-    profession1: profession1.value,
-    profession2: profession2.value,
-  }
-
   try {
+    loading.value = true
+    const body = {
+      profession1: profession1.value,
+      profession2: profession2.value,
+    }
     await axios.post(SHEET_URL, body)
     wasSucceed.value = true
   } catch(e) {
