@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {computed, ref} from 'vue'
 import axios from 'axios'
+import logo from '/logo.jpg'
+import admin from './assets/admin.jpg'
 import loader from './assets/loader.svg'
-
 
 const SHEET_URL = 'https://sheetdb.io/api/v1/cpqhntf3si7yg'
 
@@ -12,6 +13,7 @@ const wasSucceed = ref(false)
 const wasFailed = ref(false)
 const profession1 = ref('')
 const profession2 = ref('')
+const imageSrc = ref(logo)
 
 const isFormValid = computed(() => {
   if (!touched.value) return true
@@ -91,8 +93,10 @@ function resetForm() {
       паблик мужские мысли
     </div>
     <img
+      @mouseenter='imageSrc = admin'
+      @mouseleave='imageSrc = logo'
       :class='$style.image'
-      src='/logo.jpg'
+      :src='imageSrc'
     >
     <div :class='$style.formTitle'>
       симбиоз профессий
@@ -174,6 +178,8 @@ body {
 .image {
   display: flex;
   max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
   width: 100%;
 }
 .formTitle {
